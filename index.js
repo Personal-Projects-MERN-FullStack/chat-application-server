@@ -11,9 +11,7 @@
 const users=[{}];
 
 
-app.use(cors({origin: '*',
-methods: 'GET,PUT,POST,DELETE,OPTIONS'.split(','),
-credentials: true}));
+app.use(cors({origin: '*'}));
  app.get("/",(req,res)=>{
     res.send("hell its working")
  })
