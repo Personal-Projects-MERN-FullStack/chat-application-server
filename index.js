@@ -1,7 +1,7 @@
  const http =  require("http");
  const express = require("express");
  const cors = require("cors");
- const socketID = require("socket.io") ;
+ const socketID = require("socket.io");
  
 
  const app=express();
@@ -11,7 +11,9 @@
 const users=[{}];
 
 
-app.use(cors({origin:"*"}));
+app.use(cors({origin: '*',
+methods: 'GET,PUT,POST,DELETE,OPTIONS'.split(','),
+credentials: true}));
  app.get("/",(req,res)=>{
     res.send("hell its working")
  })
