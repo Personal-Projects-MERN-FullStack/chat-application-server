@@ -1,7 +1,8 @@
  const http =  require("http");
- const express = require("express")
- const cors = require("cors")
- const socketID = require("socket.io")
+ const express = require("express");
+ const cors = require("cors");
+ const socketID = require("socket.io") ;
+ 
 
  const app=express();
  const port=process.env.PORT;
@@ -10,7 +11,7 @@
 const users=[{}];
 
 
- app.use(cors())
+app.use(cors({origin:"*"}));
  app.get("/",(req,res)=>{
     res.send("hell its working")
  })
